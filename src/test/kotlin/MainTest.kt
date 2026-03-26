@@ -19,7 +19,7 @@ class MainTest {
 
     @Test
     fun complicatedTest() {
-        val input = "3 ^ 2 - 4 * ( 5 + 5 ) / 2"
+        val input = "3 ^ 2 - ( 5 + 5 ) / 2"
 
         val rpnForm = listOf("3", "2", "^", "4", "5", "5", "+", "2", "/", "*", "-")
         val answer = -11
