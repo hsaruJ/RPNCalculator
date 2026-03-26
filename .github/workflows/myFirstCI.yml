@@ -22,10 +22,15 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build & KtlintCheck
-        run: ./gradlew build ktlintCheck
+      - name: Build 
+        run: ./gradlew build
 
+      - name: Ktlint Checker
+        run: ./gradlew ktlintCheck
         # but there's no tests! Error?
+
+      - name: Test
+        run: ./gradlew test
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
